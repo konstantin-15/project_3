@@ -54,8 +54,16 @@ html {
     margin: 0 auto;
     padding: 0px 15px 0px 15px;
 }
+.header {
+    padding-bottom: 50px;
+}
 .background-dark {
     background-color: #F9F9F9;
+}
+.title-middle {
+    font-weight: 600;
+    font-size: 2.75rem;
+    line-height: 150%;
 }
 
 /*----------------Меню бургер------------------*/
@@ -163,6 +171,24 @@ html {
     object-fit: cover;
 }
 
+/*------Partners-------*/
+.partners {
+    padding: 50px 0 70px;
+}
+.partners__title {
+    text-align: center;
+    margin-bottom: 1.47em;
+}
+
+.partners__body {
+    display: flex;
+    align-content: flex-start;
+}
+.partners__item {
+    flex: 1 1 20%;
+    text-align: center;
+}
+
 @media (max-width: 69.375em) /* 1110px */ {
     .menu__list {
         column-gap: 10px;
@@ -176,6 +202,19 @@ html {
     .tab {
         bottom: 30px;
 }
+    .partners__body {
+        gap: 20px;
+        flex-wrap: wrap;
+}
+    .partners__item {
+        flex: 1 1 33.333%;
+    }
+    .item-partners__link_third {
+        order: 3;
+    }
+    .item-partners__link_fifth {
+        order: 5;
+    }
 }
 @media (max-width: 62em) /* 992px */ {
     .wrapper {
@@ -231,8 +270,13 @@ html {
     .tab {
         bottom: 0px;
     }
+    .partners {
+        padding: 30px 0 50px;
+    }
+    .partners__title {
+        font-size: 2.5rem;
+    }
 }
-
 @media (max-width: 47.9375em) /* 767px */ {
     .header__logo {
         margin-left: auto;
@@ -280,6 +324,12 @@ html {
     .line-fourth {
         top: 81px;
     }
+    .partners {
+        padding: 15px 0 35px;
+    }
+    .partners__title {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 30em) /* 480px */ {
@@ -288,5 +338,14 @@ html {
     }
     .header__content {
         padding-top: 35px;
+    }
+    .partners__item {
+        flex: 0 1 100%;
+    }
+    .partners {
+        padding: 0 0 35px;
+    }
+    .partners__title {
+        font-size: 1.75rem;
     }
 }
