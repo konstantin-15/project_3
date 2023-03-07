@@ -125,13 +125,14 @@ html {
     opacity: 0.7;
     display: block;
 }
-.menu__link:active {
-    color: #FE753F;
-    background: #fff;
-}
+
 .menu__link:hover {
     background: #2E6EFF;
     border-radius: 5px;
+}
+.menu__link:active {
+    color: #FE753F;
+    background: none;
 }
 
 /*------Header__content-------*/
@@ -187,6 +188,10 @@ html {
 .partners__item {
     flex: 1 1 20%;
     text-align: center;
+    transition: all 0.3s ease;
+}
+.partners__item:hover {
+    box-shadow: 0 15px 10px 0 rgba(192, 15, 46, 0.74);
 }
 
 @media (max-width: 69.375em) /* 1110px */ {
@@ -275,6 +280,10 @@ html {
     }
     .partners__title {
         font-size: 2.5rem;
+    }
+    .partners__item:active,
+    .partners__item:focus {
+        box-shadow: 0 15px 10px 0 rgba(192, 15, 46, 0.74);
     }
 }
 @media (max-width: 47.9375em) /* 767px */ {
