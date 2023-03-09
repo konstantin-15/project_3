@@ -228,6 +228,9 @@ html {
 .popular__link-view:hover {
     text-decoration: underline;
 }
+.popular__card {
+    margin-bottom: 100px;
+}
 
 /*------grid-container-------*/
 .card-popular {
@@ -237,15 +240,13 @@ html {
     grid-template-rows: repeat(2, 1fr);
     grid-auto-flow: row;
     justify-content: center;
-    margin-bottom: 100px;
+
 }
 
 .card-popular__item {
     display: grid;
     background: #FFFFFF;
-    border-radius: 10px;
-    /* justify-content: center; */
-    /* margin: auto; */
+    border-radius: 20px;
 }
 
 .card-popular__photo {
@@ -340,9 +341,135 @@ html {
     background: #0b4ade;
 }
 
+/*---------------------Property--------------------------*/
+
+.property {
+    background: #F9F9F9;
+    padding: 70px 0;
+}
+.property__top {
+    margin-bottom: 70px;
+}
+.property__title {
+    margin-bottom: 10px;
+    text-align: center;
+    
+    
+}
+.title-middle {
+}
+.property__subtitle {
+    max-width: 728px;
+    margin: 0 auto;
+    opacity: 0.7;
+    text-align: center;
+}
+.property__content {
+}
+.content-property {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(362px, 1fr));
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-auto-flow: row;
+}
+.content-property__item {
+    padding: 25px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+.property-item1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+.property-item2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.property-item3 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.property-item4 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+.property-item5 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+.property-item6 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+.property-item7 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    background: inherit;
+    padding: 0;
+    display: grid;
+    align-items: end;
+}
+.content-property__img {
+    margin-bottom: 15px;
+    width: 46px;
+    height: 46px;
+    background: rgba(254, 117, 63, 0.1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-property__icon {
+    color: rgba(254, 117, 63, 1);
+}
+.icon-big {
+    width: 100%;
+    border-radius: 10px;
+}
+.content-property__title {
+    margin-bottom: 10px;
+}
+.title-small {
+}
+.content-property__text {
+    opacity: 0.7;
+}
+
 @media (max-width: 73.4375em) /* 1175px */ {
     .popular__card {
         grid-template-columns: repeat(auto-fit, minmax(362px, 466px));
+    }
+
+    .property-item7 {
+        display: none;
+    }
+    .content-property {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .property-item1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .property-item2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .property-item3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .property-item4 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    .property-item5 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    .property-item6 {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
     }
 }
 @media (max-width: 69.375em) /* 1110px */ {
@@ -498,6 +625,36 @@ html {
         align-items: start;
         margin-bottom: 40px;
     }
+    .content-property {
+        grid-template-columns: 1fr;
+    }
+    .property-item1 {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    .property-item2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .property-item3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    .property-item4 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    .property-item5 {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+    .property-item6 {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+    }
+    .content-property__item {
+        min-width: 290px;
+    }
 }
 
 @media (max-width: 30em) /* 480px */ {
@@ -518,9 +675,25 @@ html {
     }
     .popular__card {
         grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        margin-bottom: 50px;
     }
     .popular__title {
         font-size: 2.3rem;
+    }
+    .property {
+        padding: 50px 0;
+    }
+    .property__top {
+        margin-bottom: 50px;
+    }
+    .property__title {
+        font-size: 2.3rem;
+    }
+    .property__subtitle {
+        font-size: 0.875rem;
+    }
+    .content-property__text {
+        font-size: 0.875rem;
     }
 }
 
@@ -543,6 +716,12 @@ html {
     }
     .popular__top {
         margin-bottom: 30px;
+    }
+    .property__title {
+        font-size: 1.7rem;
+    }
+    .content-property__title {
+        font-size: 1.2rem;
     }
 }
 
