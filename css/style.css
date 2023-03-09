@@ -47,11 +47,12 @@ html {
 	min-height: 100%;
 	overflow: hidden;
     padding: 35px 0 190px;
-    background-color: #FFFFFF;
+    background-color: #f5f5f5;
 }
 .container {
     max-width: 73.5rem;   /*1176px*/
     margin: 0 auto;
+    width: 100%;
     padding: 0px 15px 0px 15px;
 }
 .header {
@@ -62,7 +63,7 @@ html {
 }
 .title-middle {
     font-weight: 600;
-    font-size: 2.75rem;
+    font-size: 2.75rem;  /*44px*/
     line-height: 150%;
 }
 
@@ -124,13 +125,18 @@ html {
     color: #030A1B;
     opacity: 0.7;
     display: block;
+    outline: none;
 }
 
 .menu__link:hover {
     background: #2E6EFF;
     border-radius: 5px;
+    color: #fff;
 }
+
+.menu__link:focus,
 .menu__link:active {
+    outline: none;
     color: #FE753F;
     background: none;
 }
@@ -165,6 +171,8 @@ html {
 .header__img {
     flex: 0 0 42.234%;
     z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .building {
     width: 100%;
@@ -190,10 +198,153 @@ html {
     text-align: center;
     transition: all 0.3s ease;
 }
-.partners__item:hover {
+.partners__item:hover,
+.partners__item:focus,
+.partners__item:active {
+    box-shadow: 0 15px 10px 0 rgba(192, 15, 46, 0.74);
+}
+.item-partners__link {
+    display: block;
+    outline: none;
+}
+.item-partners__link:focus {
     box-shadow: 0 15px 10px 0 rgba(192, 15, 46, 0.74);
 }
 
+/*------Popular-------*/
+
+.popular__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.popular__title {
+    margin-right: auto;
+}
+.popular__link-view {
+    font-weight: 600;
+    color: #FE753F;
+}
+.popular__link-view:hover {
+    text-decoration: underline;
+}
+
+/*------grid-container-------*/
+.card-popular {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(362px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-flow: row;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.card-popular__item {
+    display: grid;
+    background: #FFFFFF;
+    border-radius: 10px;
+    /* justify-content: center; */
+    /* margin: auto; */
+}
+
+.card-popular__photo {
+    position: relative;
+    padding: 0 0 88.6740% 0;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+.card-popular__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card-popular__body {
+    padding: 30px 29px 30px 30px;
+}
+.card-popular__row-top {
+    display: flex;
+    margin-bottom: 10px;
+}
+.card-popular__title {
+    margin-right: auto;
+}
+.title-small {
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 150%;
+    color: #030A1B;
+}
+.card-popular__heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-popular__location {
+    margin-bottom: 20px;
+}
+.location {
+    display: flex;
+}
+.location__icon {
+    padding-right: 10px;
+    opacity: 0.7;
+}
+.location__title {
+    opacity: 0.7;
+}
+.card-popular__facility-description {
+    margin-bottom: 26px;
+}
+.description-facility {
+    display: flex;
+}
+.description-facility__item {
+    display: flex;
+    align-items: center;
+}
+.description-facility__item:not(:last-child) {
+    margin-right: 20px;
+}
+.description-facility__icon {
+    padding-right: 5px;
+}
+.description-facility__number {
+    align-self: flex-end;
+    font-size: 0.875rem;
+    line-height: 150%;
+    opacity: 0.9;
+}
+.card-popular__row-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-popular__price {
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 150%;
+    color: #FE753F;
+}
+.card-popular__details {
+    padding: 10px 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: #2E6EFF;
+    border-radius: 5px;
+}
+.card-popular__details:hover {
+    background: #0b4ade;
+}
+
+@media (max-width: 73.4375em) /* 1175px */ {
+    .popular__card {
+        grid-template-columns: repeat(auto-fit, minmax(362px, 466px));
+    }
+}
 @media (max-width: 69.375em) /* 1110px */ {
     .menu__list {
         column-gap: 10px;
@@ -220,6 +371,7 @@ html {
     .item-partners__link_fifth {
         order: 5;
     }
+    
 }
 @media (max-width: 62em) /* 992px */ {
     .wrapper {
@@ -228,7 +380,9 @@ html {
     .header__top {
         margin-bottom: 40px;
     }
-    
+    .popular__card {
+        grid-template-columns: repeat(auto-fit, minmax(362px, 1fr));
+    }
     .header__menu {
         position: absolute;
         width: 100%;
@@ -324,7 +478,6 @@ html {
     }
     .burger__line {
         top: 66px;
-
     }
     .line-second,
     .line-third {
@@ -338,6 +491,12 @@ html {
     }
     .partners__title {
         font-size: 2rem;
+    }
+    .popular__top {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 40px;
     }
 }
 
@@ -357,4 +516,155 @@ html {
     .partners__title {
         font-size: 1.75rem;
     }
+    .popular__card {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+    .popular__title {
+        font-size: 2.3rem;
+    }
 }
+
+@media (max-width: 25em) /*400px*/ {
+    .card-popular__body {
+        padding: 20px 19px 20px 20px;
+    }
+    .card-popular__title {
+        font-size: 1.2rem;
+    }
+    .card-popular__details {
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+    .card-popular__price {
+        font-size: 1.2rem;
+    }
+    .popular__title {
+        font-size: 1.7rem;
+    }
+    .popular__top {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------Card-------*/
+
+/*
+.card-popular {
+    max-width: 362px;
+}
+.card-popular__photo {
+    position: relative;
+    padding: 0 0 88.6740% 0;
+    overflow: hidden;
+    border-radius: 10px 10px 0px 0px;
+}
+.card-popular__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card-popular__body {
+    padding: 30px 29px 30px 30px;
+}
+.card-popular__row-top {
+    display: flex;
+    margin-bottom: 10px;
+}
+.card-popular__title {
+    margin-right: auto;
+}
+.title-small {
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 150%;
+    color: #030A1B;
+}
+.card-popular__heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-popular__location {
+    margin-bottom: 20px;
+}
+.location {
+    display: flex;
+}
+.location__icon {
+    padding-right: 10px;
+    opacity: 0.7;
+}
+.location__title {
+    opacity: 0.7;
+}
+.card-popular__facility-description {
+    margin-bottom: 26px;
+}
+.description-facility {
+    display: flex;
+}
+.description-facility__item {
+    display: flex;
+    align-items: center;
+}
+.description-facility__item:not(:last-child) {
+    margin-right: 20px;
+}
+.description-facility__icon {
+    padding-right: 5px;
+}
+.description-facility__number {
+    align-self: flex-end;
+    font-size: 0.875rem;
+    line-height: 150%;
+    opacity: 0.9;
+}
+.card-popular__row-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-popular__price {
+    font-weight: 600;
+    font-size: 1.375rem;
+    line-height: 150%;
+    color: #FE753F;
+}
+.card-popular__details {
+    padding: 10px 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: #2E6EFF;
+    border-radius: 5px;
+}
+
+*/
