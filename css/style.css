@@ -607,6 +607,7 @@ html {
 .container {
 }
 .email__body {
+    position: relative;
     padding: 70px 10px;
     background: #433E89;
     border-radius: 10px;
@@ -668,6 +669,16 @@ html {
 }
 .email__button:hover {
     background: #1359fd;
+}
+.ellips-left {
+    position: absolute;
+    top: 26px;
+    left: -105px;
+}
+.ellips-right {
+    position: absolute;
+    bottom: -31px;
+    right: 16px;
 }
 
 
