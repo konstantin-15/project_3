@@ -673,12 +673,17 @@ html {
 .ellips-left {
     position: absolute;
     top: 26px;
-    left: -105px;
+    left: 0;
+    /* width: 9%; */
+    transform: rotate(20deg);
+    transform-origin: top left;
+    
 }
 .ellips-right {
     position: absolute;
     bottom: -31px;
     right: 16px;
+    width: 17.68%;
 }
 
 
@@ -906,6 +911,10 @@ html {
     }
     .email__button {
         padding: 16px 25px 16px 25px;
+    }
+    .ellips-left,
+    .ellips-right {
+        display: none;
     }
 }
 
