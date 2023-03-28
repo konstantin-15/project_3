@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>RubyHome</title>
 </head>
@@ -56,7 +57,142 @@
                             Buying a home is a life-changing experience, so shouldn’t your real estate agent be a life changer.
                         </p>
     
-                        
+                        <div class="header__tab tab">
+                            <div class="tab__top">
+                                <div class="tab__offers">
+                                    <!-- <div class="tab__item">Buy</div>
+                                    <div class="tab__item">Rent</div>
+                                    <div class="tab__item">Sell</div> -->
+
+                                    <button class="tab__item active">Buy</button>
+                                    <button class="tab__item">Rent</button>
+                                    <button class="tab__item">Sell</button>
+                                </div>
+                                <div class="tab__decor decor">
+                                </div>
+                            </div>
+                            <div class="flex-box">
+                                <div class="flex-box__item item-box">
+                                    <div class="item-box__top">
+                                        <div class="item-box__text">location</div>
+                                        <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
+                                    </div>
+                                    
+                                    <select class="item-box__select" name="city">
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Dubai">Dubai</option>
+                                        <option value="London">London</option>
+                                    </select>
+                                </div>
+                
+                                <div class="flex-box__item item-box">
+                                    <div class="item-box__top">
+                                        <div class="item-box__text">location</div>
+                                        <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
+                                    </div>
+                                    
+                                    <select class="item-box__select" name="city">
+                                        <option value="Duplex">Duplex</option>
+                                        <option value="Triplex">Triplex</option>
+                                        <option value="Single">Single</option>
+                                    </select>
+                                </div>
+                
+                                <div class="flex-box__item item-box">
+                                    <div class="item-box__top">
+                                        <div class="item-box__text">location</div>
+                                        <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
+                                    </div>
+                                    
+                                    <select class="item-box__select" name="city">
+                                        <option value="$">$4000-$8000</option>
+                                        <option value="$">$10000-$15000</option>
+                                        <option value="$">$3000-$5000</option>
+                                    </select>
+                                </div>
+                
+                                <div class="flex-box__item">
+                                    <button class="flex-box__search btn">
+                                        <img class="btn__img" src="images/header/search-button.svg" alt="search">
+                                        <p class="btn__text">Search</p>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- <div class="tab__body">
+                                <div class="tab__content content-tab active">
+                                    <div class="content-tab__inner">
+                                        <div class="content-tab__box">
+                                            <div class="content-tab__label label-tab">
+                                                <div class="label-tab__text">location</div>
+                                                <img class="label-tab__arrow" src="images/header/arrow.svg" alt="arrow">
+                                            </div>
+                                            
+                                            <select class="tab-select" name="city">
+                                                <option value="Dhaka">Dhaka</option>
+                                                <option value="Dubai">Dubai</option>
+                                                <option value="London">London</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="content-tab__inner">
+                                        <div class="content-tab__box">
+                                            <div class="content-tab__label label-tab">
+                                                <div class="label-tab__text">Property type</div>
+                                                <img class="label-tab__arrow" src="images/header/arrow.svg" alt="arrow">
+                                            </div>
+                                            
+                                            <select class="tab-select" name="select2">
+                                                <option value="Duplex">Duplex</option>
+                                                <option value="Triplex">Triplex</option>
+                                                <option value="Single">Single</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="content-tab__inner content-tab__inner-price">
+                                        <div class="content-tab__box">
+                                            <div class="content-tab__label label-tab ">
+                                                <div class="label-tab__text">Price</div>
+                                                <img class="label-tab__arrow" src="images/header/arrow.svg" alt="arrow">
+                                            </div>
+                                            
+                                            <select class="tab-select" name="price">
+                                                <option value="$">$4000-$8000</option>
+                                                <option value="$">$10000-$15000</option>
+                                                <option value="$">$3000-$5000</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="content-tab__inner">
+                                        <button class="tab__search search-btn">
+                                            <img class="search-btn__img" src="images/header/search-button.svg" alt="search">
+                                            <p class="search-btn__text">Search</p>
+                                        </button>
+                                    </div>
+                                    
+                                    
+
+                                </div>
+
+
+
+
+                                <div class="tab__content content-tab">
+                                    <div class="content-tab__item tab__location">Dubai</div>
+                                    <div class="content-tab__item tab__property">Triplex</div>
+                                    <div class="content-tab__item tab__price">$10000-$15000</div>
+                                    <div class="content-tab__item tab__search">Search</div>
+                                </div>
+                                <div class="tab__content content-tab">
+                                    <div class="content-tab__item tab__location">London</div>
+                                    <div class="content-tab__item tab__property">Single</div>
+                                    <div class="content-tab__item tab__price">$3000-$5000</div>
+                                    <div class="content-tab__item tab__search">Search</div>
+                                </div>
+                            </div> -->
+                        </div>
                     </div>
                     
                     <div class="header__img">
@@ -66,7 +202,9 @@
                     <!-- <div class="tab"></div> -->
 
                     
-                </div>               
+                </div>
+
+                
             </div>
             
         </header>
@@ -696,9 +834,63 @@
             </div>
         </footer>
 
+        <div class="container">
+            <div class="flex-box">
+                <div class="flex-box__item item-box">
+                    <div class="item-box__top">
+                        <div class="item-box__text">location</div>
+                        <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
+                    </div>
+                    
+                    <select class="item-box__select" name="city">
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Dubai">Dubai</option>
+                        <option value="London">London</option>
+                    </select>
+                </div>
+
+                <div class="flex-box__item item-box">
+                    <div class="item-box__top">
+                        <div class="item-box__text">location</div>
+                        <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
+                    </div>
+                    
+                    <select class="item-box__select" name="city">
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Dubai">Dubai</option>
+                        <option value="London">London</option>
+                    </select>
+                </div>
+
+                <div class="flex-box__item item-box">
+                    <div class="item-box__top">
+                        <div class="item-box__text">location</div>
+                        <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
+                    </div>
+                    
+                    <select class="item-box__select" name="city">
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Dubai">Dubai</option>
+                        <option value="London">London</option>
+                    </select>
+                </div>
+
+                <div class="flex-box__item">
+                    <button class="flex-box__search btn">
+                        <img class="btn__img" src="images/header/search-button.svg" alt="search">
+                        <p class="btn__text">Search</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+       
+
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="js/slick.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
         <script src="js/script.js"></script>
+        
+
     </div>  <!-- /wrapper -->
     
 </body>
