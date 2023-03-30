@@ -30,19 +30,19 @@
                     <nav class=" header__menu menu">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a class="menu__link" href="#home">Home</a>
+                                <a class="menu__link active" href="#home">Home</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="">Properties</a>
+                                <a class="menu__link" href="#properties">Properties</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="">About us</a>
+                                <a class="menu__link" href="#about">About us</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="">Blog</a>
+                                <a class="menu__link" href="#blog">Blog</a>
                             </li>
                             <li class="menu__item">
-                                <a class="menu__link" href="">Contact us</a>
+                                <a class="menu__link" href="#contact">Contact us</a>
                             </li>
                         </ul>
                     </nav>
@@ -60,10 +60,6 @@
                         <div class="header__tab tab">
                             <div class="tab__top">
                                 <div class="tab__offers">
-                                    <!-- <div class="tab__item">Buy</div>
-                                    <div class="tab__item">Rent</div>
-                                    <div class="tab__item">Sell</div> -->
-
                                     <button class="tab__item active">Buy</button>
                                     <button class="tab__item">Rent</button>
                                     <button class="tab__item">Sell</button>
@@ -71,11 +67,13 @@
                                 <div class="tab__decor decor">
                                 </div>
                             </div>
-                            <div class="flex-box">
+                            <div class="flex-box active">
                                 <div class="flex-box__item item-box">
                                     <div class="item-box__top">
                                         <div class="item-box__text">location</div>
-                                        <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
+                                        <div class="item-box__arrow">
+                                            <img class="item-box__icon" src="images/header/arrow.svg" alt="arrow">
+                                        </div>
                                     </div>
                                     
                                     <select class="item-box__select" name="city">
@@ -87,7 +85,7 @@
                 
                                 <div class="flex-box__item item-box">
                                     <div class="item-box__top">
-                                        <div class="item-box__text">location</div>
+                                        <div class="item-box__text">Property type</div>
                                         <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
                                     </div>
                                     
@@ -100,7 +98,107 @@
                 
                                 <div class="flex-box__item item-box">
                                     <div class="item-box__top">
+                                        <div class="item-box__text">Price</div>
+                                        <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
+                                    </div>
+                                    
+                                    <select class="item-box__select" name="city">
+                                        <option value="$">$4000-$8000</option>
+                                        <option value="$">$10000-$15000</option>
+                                        <option value="$">$3000-$5000</option>
+                                    </select>
+                                </div>
+                
+                                <div class="flex-box__item">
+                                    <button class="flex-box__search btn">
+                                        <img class="btn__img" src="images/header/search-button.svg" alt="search">
+                                        <p class="btn__text">Search</p>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex-box">
+                                <div class="flex-box__item item-box">
+                                    <div class="item-box__top">
                                         <div class="item-box__text">location</div>
+                                        <div class="item-box__arrow">
+                                            <img class="item-box__icon" src="images/header/arrow.svg" alt="arrow">
+                                        </div>
+                                    </div>
+                                    
+                                    <select class="item-box__select" name="city">
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Dubai">Dubai</option>
+                                        <option value="London">London</option>
+                                    </select>
+                                </div>
+                
+                                <div class="flex-box__item item-box">
+                                    <div class="item-box__top">
+                                        <div class="item-box__text">Property type</div>
+                                        <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
+                                    </div>
+                                    
+                                    <select class="item-box__select" name="city">
+                                        <option value="Duplex">Duplex</option>
+                                        <option value="Triplex">Triplex</option>
+                                        <option value="Single">Single</option>
+                                    </select>
+                                </div>
+                
+                                <div class="flex-box__item item-box">
+                                    <div class="item-box__top">
+                                        <div class="item-box__text">Price</div>
+                                        <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
+                                    </div>
+                                    
+                                    <select class="item-box__select" name="city">
+                                        <option value="$">$4000-$8000</option>
+                                        <option value="$">$10000-$15000</option>
+                                        <option value="$">$3000-$5000</option>
+                                    </select>
+                                </div>
+                
+                                <div class="flex-box__item">
+                                    <button class="flex-box__search btn">
+                                        <img class="btn__img" src="images/header/search-button.svg" alt="search">
+                                        <p class="btn__text">Search</p>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex-box">
+                                <div class="flex-box__item item-box">
+                                    <div class="item-box__top">
+                                        <div class="item-box__text">location</div>
+                                        <div class="item-box__arrow">
+                                            <img class="item-box__icon" src="images/header/arrow.svg" alt="arrow">
+                                        </div>
+                                    </div>
+                                    
+                                    <select class="item-box__select" name="city">
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Dubai">Dubai</option>
+                                        <option value="London">London</option>
+                                    </select>
+                                </div>
+                
+                                <div class="flex-box__item item-box">
+                                    <div class="item-box__top">
+                                        <div class="item-box__text">Property type</div>
+                                        <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
+                                    </div>
+                                    
+                                    <select class="item-box__select" name="city">
+                                        <option value="Duplex">Duplex</option>
+                                        <option value="Triplex">Triplex</option>
+                                        <option value="Single">Single</option>
+                                    </select>
+                                </div>
+                
+                                <div class="flex-box__item item-box">
+                                    <div class="item-box__top">
+                                        <div class="item-box__text">Price</div>
                                         <img class="item-box__arrow" src="images/header/arrow.svg" alt="arrow">
                                     </div>
                                     
@@ -245,7 +343,7 @@
             </div>
         </section>
 
-        <section class="popular">
+        <section class="popular" id="properties">
             <div class="container">
                 <div class="popular__top">
                     <h2 class="popular__title title-middle">
@@ -581,7 +679,7 @@
             </div>
         </section>
 
-        <section class="reviews">
+        <section class="reviews" id="about">
             <div class="container">
                 <a class="reviews__link" href="">Reviews</a>
                 <div class="reviews__title title-middle">Our valuable customer says</div>
@@ -707,7 +805,7 @@
             </div>
         </section>
 
-        <section class="email">
+        <section class="email" id="blog">
             <div class="container">
                 <div class="email__body">
                     <div class="email__top">
@@ -729,7 +827,7 @@
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="footer" id="contact">
             <div class="container">
                 <div class="footer__body">
                     <div class="footer__column">

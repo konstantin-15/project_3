@@ -67,6 +67,9 @@ html {
 .header {
     padding-bottom: 50px;
 }
+.menu__link.active {
+    color: #FE753F;
+}
 .background-dark {
     background-color: #F9F9F9;
 }
@@ -219,9 +222,7 @@ html {
     min-height: 54px;
     display: flex;
     justify-content: space-between;
-
     padding: 0 21px;
-    
     border-radius: 5px 5px 0 0;
     background: #FFFFFF;
 }
@@ -282,13 +283,16 @@ html {
     border-radius: 0 5px 5px 5px;
 }
 
-.content-tab {
+/* .content-tab {
     display: flex;
-    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     display: none;
-}
+} */
+
+
+
 .content-tab__inner {
     /* flex: 0 1 25%; */
     /* padding: 0 0 0 31px; */
@@ -671,14 +675,14 @@ html {
     padding: 140px 0 113px;
 }
 .reviews__link {
+    max-width: 250px;
     display: block;
-    margin-bottom: 10px;
+    margin: 0 auto 10px;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #FE753F;
     text-align: center;
-
 }
 .reviews__link:hover {
     text-decoration: underline;
@@ -1089,7 +1093,8 @@ html {
     }
     #burger:checked ~ .header__menu {
 		left: 50%;
-        top: 150px;
+        top: 600%;
+        border-radius: 5px;
 	}
     .menu__list {
         flex-wrap: wrap;
@@ -1123,19 +1128,27 @@ html {
     .line-fourth {
         top: 81px;
     }
+    .header__content {
+        padding: 10px 10px 10px;
+    }
     .header__tab {
         left: 50%;
         transform: translate(-50%);
-        bottom: -33.8em;
+        bottom: -32.8em;
+
     }
     .tab {
-       max-width: 85%;
-       margin: 0 auto;
+        max-width: 85%;
+        margin: 0 auto;
     }
     .tab__top {
         max-width: 258px;
         margin: 0 auto;
     }
+    .tab .flex-box {
+        border-radius: 5px 5px 5px 5px;
+    }
+    
     .flex-box__item {
         text-align: left;
     }
@@ -1150,10 +1163,10 @@ html {
     }
 }
 @media (max-width: 47.9375em) /* 767px */ {
-    .flex-box .flex-box__item {
-        /* flex: 1 1 100%; */
-
+    .header {
+        padding-bottom: 80px;
     }
+
     .partners {
         padding: 15px 0 35px;
     }
@@ -1236,9 +1249,6 @@ html {
     .header__title {
         font-size: 2rem;
     }
-    .header__content {
-        padding-top: 35px;
-    }
     .partners__item {
         flex: 0 1 100%;
     }
@@ -1303,8 +1313,20 @@ html {
         position: static;
     }
 }
-
+@media (max-width: 27.875em) /*446px*/ {
+    .header {
+        padding-bottom: 190px;
+    }
+}
+@media (max-width: 26.625em) /*426px*/ {
+    .header {
+        padding-bottom: 210px;
+    }
+}
 @media (max-width: 25em) /*400px*/ {
+    .header {
+        padding-bottom: 360px;
+    }
     .card-popular__body {
         padding: 20px 19px 20px 20px;
     }
@@ -1351,6 +1373,18 @@ html {
     .email__title {
         font-size: 1.75rem;
     }
+    .tab__top .tab__offers {
+        min-width: 207.86px;
+        margin: 0 auto;
+    }
+    .flex-box .flex-box__item {
+        flex: 1 1 100%;
+    }
+}
+@media (max-width: 22.5em) /*360px*/ {
+    .header {
+        padding-bottom: 405px;
+    }
 }
 
 
@@ -1369,13 +1403,20 @@ html {
     max-width: 842px;
     background: #FFFFFF;
     border-radius: 0 5px 5px 5px;
-
+}
+.flex-box {
+    display: none;
+}
+.flex-box.active {
+    display: flex;
 }
 
 .flex-box__item {
     position: relative;
     flex: 1 1 25%;
     /* margin: 2px; */
+    display: flex;
+    flex-direction: column;
     padding: 10px;
 
 }
@@ -1397,10 +1438,16 @@ html {
     border: 1px solid #030A1B;
 }
 .item-box__top {
-    /* margin-bottom: 10px; */
     display: flex;
     gap: 10px;
     opacity: 0.7;
+    align-items: baseline;
+}
+.item-box__arrow {
+    display: flex;
+}
+.item-box__top{
+    flex: 1 1 auto;
 }
 .item-box__select {
     font-weight: 500;
@@ -1423,7 +1470,10 @@ html {
     cursor: pointer;
 }
 .flex-box__search:hover {
-    background: #1a5af1;
+    background: #1a5efb;
+}
+.flex-box__item:not(:last-child):hover {
+    border: 1px solid #2E6EFF;
 }
 .btn__text {
     margin-left: 10.8px;
@@ -1437,6 +1487,9 @@ html {
     color: #030A1B;
     border: 0;
     background: #FFFFFF;
+}
+.choices__inner:hover {
+    /* background: #0b4ade; */
 }
 .choices__list--single {
     padding: 0;
