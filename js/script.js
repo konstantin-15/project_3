@@ -18,18 +18,6 @@ $(document).ready(function(){
             }
         ]
     });
-    // const tabs = document.querySelectorAll('.tab__item');
-    // const tabsContent = document.querySelectorAll('.content-tab');
-
-    // tabs.forEach((tab, index) => {
-    //     tab.addEventListener('click', () => {
-    //         tabs.forEach(tab => {tab.classList.remove('active')});
-    //         tab.classList.add('active');
-
-    //         tabsContent.forEach(content => {content.classList.remove('active')});
-    //         tabsContent[index].classList.add('active');
-    //     })
-    // });
 
     const tabs = document.querySelectorAll('.tab__item');
     const tabsContent = document.querySelectorAll('.flex-box');
@@ -44,26 +32,22 @@ $(document).ready(function(){
         })
     });
 
-    // const multiSelect = () => {
-    //     const element = document.querySelectorAll('.tab-select');
-    //     const choices = new Choices(element, {
-    //         searchEnabled: false,
-    //     })
-    // }
-
-    // multiSelect();
-
-    // const multiSelect = () => {
-    //     const elements = document.querySelectorAll('.tab-select');
-    //     elements.forEach(el => {
-    //         const choices = new Choices(el, {
-    //             searchEnabled: false,
-    //             itemSelectText: "",
-    //         });
-    //     });
-    // }
+    const links = document.querySelectorAll('.menu__link');
     
-    // multiSelect();
+    links.forEach((link, index) => {
+        link.addEventListener('click', () => {
+            links.forEach(link => {link.classList.remove('active')});
+            link.classList.add('active');
+        })
+    });
+
+    const icons = document.querySelectorAll('.heart__img');
+    
+    icons.forEach((icon, index) => {
+        icon.addEventListener('click', () => {
+            icon.classList.toggle('active');
+        })
+    });
 
     const multiSelect = () => {
         const elements = document.querySelectorAll('.item-box__select');
@@ -76,6 +60,4 @@ $(document).ready(function(){
     }
     
     multiSelect();
-
-
 });
