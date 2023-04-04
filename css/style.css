@@ -116,8 +116,6 @@ html {
 
 /*------Header__top-------*/
 
-.header {
-}
 .header__top {
     position: relative;
     margin-bottom: 70px;
@@ -477,8 +475,7 @@ html {
     color: #030A1B;
 }
 .card-popular__heart {
-    display: flex;
-    align-items: center;
+    padding: 7px 0 0 10px;
 }
 .heart__img {
     cursor: pointer;
