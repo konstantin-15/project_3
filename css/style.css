@@ -264,14 +264,12 @@ html {
 .flex-box.active {
     display: flex;
 }
-
 .flex-box__item {
     position: relative;
     flex: 1 1 25%;
     display: flex;
     flex-direction: column;
     padding: 10px;
-
 }
 .flex-box__item:last-child {
     display: flex;
@@ -673,16 +671,19 @@ html {
     background-image: url(../images/property/property-bk.png);
     background-repeat: no-repeat;
 }
-.slider {
+
+.slider__content {
+    height: 100%;
+}
+.swiper-pagination {
     position: relative;
-    overflow: hidden;
+    margin-top: 40px;
 }
 .slider__item {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     padding: 30px 40px 30px 30px;
-    min-width: 0;
     background: #FFFFFF;
     border: 2px solid rgba(254, 117, 63, 0.1);
     border-radius: 10px;
@@ -709,6 +710,8 @@ html {
     object-fit: cover;
 }
 .slider__info {
+    display: flex;
+    flex-direction: column;
     padding-right: 20px;
 }
 .slider__quote {
@@ -716,34 +719,6 @@ html {
 }
 .slider__text {
     opacity: 0.7;
-}
-/* Лента слайдов */
-.slick-track {
-    display: flex;
-    margin-bottom: 40px;
-}
-/* Точки (булиты) */
-.slider .slick-dots {
-    display: flex;
-    justify-content: center;
-}
-.slider .slick-dots li {
-    margin: 0 10px;
-}
-.slider .slick-dots li.slick-active button {
-    background: #2E6EFF;
-}
-/* Элемент точки */
-.slider .slick-dots li button {
-    font-size: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #EDEDED;
-}
-/* Слайд */
-.slick-slide {
-    margin: 0 15px;
 }
 
 /*-------------------------------------------Email------------------------------------------------*/
@@ -1056,7 +1031,7 @@ html {
         max-width: 150px;
         transform: translateX(-50%);
         z-index: 20;
-        background: rgba(192, 15, 46, 0.74);
+        background: rgb(15 72 192 / 40%);
     }
     #burger:checked ~ .header__menu {
 		left: 50%;

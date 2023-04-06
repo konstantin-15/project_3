@@ -1,23 +1,5 @@
-$(document).ready(function(){
-    $('.slider').slick({
-        arrows: false,
-        dots: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnHover: true,
-        pauseOnDotsHover: true,
-        responsive:[
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
+
+
 
     const tabs = document.querySelectorAll('.tab__item');
     const tabsContent = document.querySelectorAll('.flex-box');
@@ -60,4 +42,21 @@ $(document).ready(function(){
     }
     
     multiSelect();
-});
+
+    var swiper = new Swiper(".slider", {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+
+        breakpoints:{
+            0: {
+                slidesPerView: 1,
+            },
+            767: {
+                slidesPerView: 2,
+            },
+        }
+    });
